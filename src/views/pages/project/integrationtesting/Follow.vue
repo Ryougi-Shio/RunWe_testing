@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div>
-      <div>
+    <div >
+      <div >
         <img src="../../../../assets/follow集成.png" class="img"/>
         <el-card class="box-card">
         <div slot="header" class="clearfix">
@@ -12,6 +12,10 @@
           {{content_userTest[o]}}
         </div>
         </el-card>
+        <div class="answer">生成的测试报告如下：</div>
+        <div style="width:100%;height:100%">
+          <iframe src="/static/report/FollowController测试报告.html" style="width:90%;height:850px"></iframe>
+        </div>
       </div>
     </div>
   </template>
@@ -40,6 +44,11 @@
         .img {
             width:70%
         }
+        .answer {
+          font-size:30px;
+          font-weight:bold;
+          margin-bottom:10px;
+        }
   </style>
       
   <script>
@@ -49,9 +58,9 @@
           data() {
             return {
               content_userTest:["","在Follow集成测试中，主要对FollowController进行测试，主要有以下接口",
-              "1. /follow接口","2. /follow/{id}接口","3. /follow/common/{id}接口", "4. /follow/or/not/{followUserId}接口"]
+              "1. /follow接口","2. /follow/{id}接口","3. /follow/common/{id}接口", "4. /follow/or/not/{followUserId}接口"],
             }
-          }
+          },
         };
   </script>
       
