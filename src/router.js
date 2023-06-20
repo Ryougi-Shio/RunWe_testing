@@ -47,28 +47,16 @@ export default new Router({
             import('./views/pages/project/systemtesting/performanceTest.vue')
     },
     {
-        path: '/articleSystem',
-        name: 'articleSystem',
+        path: '/systemTest1',
+        name: 'systemTest1',
         component: () =>
-            import('./views/pages/project/systemtesting/article.vue')
+            import('./views/pages/project/systemtesting/systemTest1.vue')
     },
     {
-        path: '/userSystem',
-        name: 'userSystem',
+        path: '/systemTest2',
+        name: 'systemTest2',
         component: () =>
-            import('./views/pages/project/systemtesting/user.vue')
-    },
-    {
-        path: '/followSystem',
-        name: 'followSystem',
-        component: () =>
-            import('./views/pages/project/systemtesting/follow.vue')
-    },
-    {
-        path: '/managerSystem',
-        name: 'managerSystem',
-        component: () =>
-            import('./views/pages/project/systemtesting/manager.vue')
+            import('./views/pages/project/systemtesting/systemTest2.vue')
     },
     {
         path: '/ATM',

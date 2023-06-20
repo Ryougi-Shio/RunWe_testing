@@ -190,36 +190,18 @@ export default {
                 {
                   entity: {
                     id: 15,
-                    name: "userSystem",
+                    name: "systemTest1",
                     icon: "el-icon-sold-out\r\n",
-                    alias: "User模块",
+                    alias: "系统测试事件流1",
                     value: "/content/email"
                   }
                 },
                 {
                   entity: {
                     id: 16,
-                    name: "articleSystem",
+                    name: "systemTest2",
                     icon: "el-icon-sold-out\r\n",
-                    alias: "Article模块",
-                    value: "/content/email"
-                  }
-                },
-                {
-                  entity: {
-                    id: 17,
-                    name: "followSystem",
-                    icon: "el-icon-sold-out\r\n",
-                    alias: "Follow模块",
-                    value: "/content/email"
-                  }
-                },
-                {
-                  entity: {
-                    id: 18,
-                    name: "managerSystem",
-                    icon: "el-icon-sold-out\r\n",
-                    alias: "Manager模块",
+                    alias: "系统测试事件流2",
                     value: "/content/email"
                   }
                 },
