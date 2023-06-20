@@ -71,10 +71,40 @@ export default new Router({
             import('./views/pages/project/systemtesting/manager.vue')
     },
     {
-        path: '/indexHomework',
-        name: 'indexHomework',
+        path: '/ATM',
+        name: 'ATM',
         component: () =>
-            import('./views/pages/homework/homework.vue')
+            import('./views/pages/homework/ATM.vue')
+    },
+    {
+        path: '/DianXinFeiYong',
+        name: 'DianXinFeiYong',
+        component: () =>
+            import('./views/pages/homework/DianXinFeiYong.vue')
+    },
+    {
+        path: '/Triangle',
+        name: 'Triangle',
+        component: () =>
+            import('./views/pages/homework/Triangle.vue')
+    },
+    {
+        path: '/WanNianLi',
+        name: 'WanNianLi',
+        component: () =>
+            import('./views/pages/homework/WanNianLi.vue')
+    },
+    {
+        path: '/WhiteBox',
+        name: 'WhiteBox',
+        component: () =>
+            import('./views/pages/homework/WhiteBox.vue')
+    },
+    {
+        path: '/YongJin',
+        name: 'YongJin',
+        component: () =>
+            import('./views/pages/homework/YongJin.vue')
     },
     {
         path: '/userunit',

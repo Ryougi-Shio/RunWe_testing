@@ -31,12 +31,36 @@ export default {
           childs: [
             {
               entity: {
-                id: 1,
-                name: "indexHomework",
+                id: 20,
+                name: "DianXinFeiYong",
                 icon: "el-icon-loading",
-                alias: "作业首页"
+                alias: "电信费用问题"
               }
-            }
+            },
+            {
+              entity: {
+                id: 21,
+                name: "Triangle",
+                icon: "el-icon-loading",
+                alias: "三角形问题"
+              }
+            },
+            {
+              entity: {
+                id: 22,
+                name: "WanNianLi",
+                icon: "el-icon-loading",
+                alias: "万年历问题"
+              }
+            },
+            {
+              entity: {
+                id: 24,
+                name: "YongJin",
+                icon: "el-icon-loading",
+                alias: "电脑销售问题"
+              }
+            },
           ]
         },
         {
@@ -183,7 +207,7 @@ export default {
                 },
                 {
                   entity: {
-                    id: 15,
+                    id: 17,
                     name: "followSystem",
                     icon: "el-icon-sold-out\r\n",
                     alias: "Follow模块",
@@ -192,7 +216,7 @@ export default {
                 },
                 {
                   entity: {
-                    id: 15,
+                    id: 18,
                     name: "managerSystem",
                     icon: "el-icon-sold-out\r\n",
                     alias: "Manager模块",
