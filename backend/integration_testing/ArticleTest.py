@@ -3,7 +3,7 @@ import requests
 import ArticleUseCase
 from BeautifulReport import BeautifulReport
 
-suite = unittest.TestSuite()    # 类的实例化！！！要加括号才是实例化
+suite = unittest.TestSuite()  # 类的实例化！！！要加括号才是实例化
 ids = ArticleUseCase.ids
 likes = ArticleUseCase.likes
 contexts = ArticleUseCase.contexts
@@ -17,7 +17,7 @@ class ArticleTest(unittest.TestCase):  # 调用unittest
         global token  # 设置一个全局变量
         token = re.json()['data']['tokenValue']  # 给全局变量赋值，值为接口响应的token的值
 
-    def tearDown(self) -> None:          # 后置条件
+    def tearDown(self) -> None:  # 后置条件
         print("执行结束")  # 打印标示用例执行结束
 
     def test_like(self):
@@ -39,7 +39,7 @@ class ArticleTest(unittest.TestCase):  # 调用unittest
         '''
         # 查询接口
         for i in ids:
-            res = requests.get('http://localhost:8081/article/'+i,
+            res = requests.get('http://localhost:8081/article/' + i,
                                headers={'Content-Type': 'application/json', "satoken": token})
             a = res.text
             print(a)  # 打印结果
@@ -56,6 +56,16 @@ class ArticleTest(unittest.TestCase):  # 调用unittest
                                 params={"context": i})
             a = res.text
         print(a)
+
+
+def doA():
+    suite.addTest(ArticleTest('test_get_article'))  # 添加测试用例
+    suite.addTest(ArticleTest('test_like'))  # 添加测试用例
+    suite.addTest(ArticleTest('test_add_article'))  # 添加测试用例
+    # 添加用例描述
+    result = BeautifulReport(suite)
+    result.report(filename='ArticleController测试报告', description='Article测试报告',
+                  log_path='../../public/static/report')
 
 
 if __name__ == '__main__':

@@ -15,7 +15,7 @@
       </el-card>
       <div class="answer">生成的测试报告如下：</div>
         <div style="width:100%;height:100%">
-          <iframe src="/static/report/UserController测试报告.html" style="width:90%;height:650px"></iframe>
+          <iframe id="html"  style="width:90%;height:850px"></iframe>
         </div>
     </div>
   </div>
@@ -48,6 +48,8 @@
 </style>
     
 <script>
+import axios from "axios";
+
       export default {
         // eslint-disable-next-line vue/multi-word-component-names
         name:'User',
@@ -56,7 +58,30 @@
             content_userTest:["","在User集成测试中，主要对UserController进行测试，主要有以下接口",
             "1. POST /user接口","2. PUT /user接口","3. /SearchUser接口","4. DELETE /user/{id}接口"]
           }
+        },
+        methods: {
+        handleClick() {
+        let param = new FormData();
+        param.append("test","article")
+        //console.log(param.get("test"))
+
+        let config={
+          headers: { "Content-Type": "multipart/form-data" },
         }
+        axios
+          .post("http://127.0.0.1:8000/do", param, config)
+          .then((response) => {
+            // eslint-disable-next-line no-console
+            console.log(response);
+            if (response['data']=="True"){
+            document.getElementById("html").src="/static/report/UserController测试报告.html";
+            // eslint-disable-next-line no-console
+            console.log("ok")
+        }
+
+          });
+        }
+    },
       };
 </script>
     

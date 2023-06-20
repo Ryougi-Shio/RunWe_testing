@@ -63,6 +63,16 @@ class ArticleTest(unittest.TestCase):  # 调用unittest
             a = res.text
             print(a)
 
+def DoU():
+    suite.addTest(ArticleTest('test_add'))  # 添加测试用例
+    suite.addTest(ArticleTest('test_delete'))  # 添加测试用例
+    suite.addTest(ArticleTest('test_search'))  # 添加测试用例
+    suite.addTest(ArticleTest('test_put'))  # 添加测试用例
+    # 添加用例描述
+    result = BeautifulReport(suite)
+    result.report(filename='UserController测试报告', description='UserController',
+                  log_path='../../public/static/report')
+
 
 if __name__ == '__main__':
     suite.addTest(ArticleTest('test_add'))  # 添加测试用例

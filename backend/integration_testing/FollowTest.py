@@ -60,6 +60,17 @@ class FollowTest(unittest.TestCase):  # 调用unittest
             print(a)
 
 
+def doF():
+    suite.addTest(FollowTest('test_follow'))
+    suite.addTest(FollowTest('test_getFollow'))
+    suite.addTest(FollowTest('test_followOrNot'))
+    suite.addTest(FollowTest('test_commonFollow'))
+    # 添加用例描述
+    result = BeautifulReport(suite)
+    result.report(filename='FollowController测试报告', description='FollowController',
+                  log_path='../../public/static/report')
+
+
 if __name__ == '__main__':
     suite.addTest(FollowTest('test_follow'))
     suite.addTest(FollowTest('test_getFollow'))

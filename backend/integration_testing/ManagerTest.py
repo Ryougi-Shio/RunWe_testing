@@ -84,6 +84,18 @@ class ManagerTest(unittest.TestCase):  # 调用unittest
             a = res.text
             print(a)
 
+def DoM():
+    suite.addTest(ManagerTest('test_changeRank'))
+    suite.addTest(ManagerTest('test_getClub'))
+    suite.addTest(ManagerTest('test_getRank'))
+    suite.addTest(ManagerTest('test_postManager'))
+    suite.addTest(ManagerTest('test_deleteManager'))
+    suite.addTest(ManagerTest('test_getManager'))
+    # 添加用例描述
+    result = BeautifulReport(suite)
+    result.report(filename='ManagerController测试报告', description='ManagerController',
+                  log_path='../../public/static/report')
+
 
 if __name__ == '__main__':
     suite.addTest(ManagerTest('test_changeRank'))
