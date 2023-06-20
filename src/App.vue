@@ -6,7 +6,7 @@
       active-text-color="#ffd04b"
       :default-active="activeIndex"
       router
-      style="min-height:100vh;width:200px;float:left"
+      style="min-height:100vh;width:230px;float:left"
     >
       <NavMenu :navMenus="menuData"></NavMenu>
     </el-menu>
@@ -163,7 +163,16 @@ export default {
                 {
                   entity: {
                     id: 14,
-                    name: "userIntegration",
+                    name: "performanceTest",
+                    icon: "el-icon-sold-out\r\n",
+                    alias: "性能及压力测试",
+                    value: "/content/email"
+                  }
+                },
+                {
+                  entity: {
+                    id: 15,
+                    name: "userSystem",
                     icon: "el-icon-sold-out\r\n",
                     alias: "User模块",
                     value: "/content/email"
@@ -171,17 +180,17 @@ export default {
                 },
                 {
                   entity: {
-                    id: 15,
-                    name: "articleIntegration",
-                    icon: "el-icon-service\r\n",
+                    id: 16,
+                    name: "articleSystem",
+                    icon: "el-icon-sold-out\r\n",
                     alias: "Article模块",
-                    value: "/content/pass"
+                    value: "/content/email"
                   }
                 },
                 {
                   entity: {
-                    id: 16,
-                    name: "followIntegration",
+                    id: 15,
+                    name: "followSystem",
                     icon: "el-icon-sold-out\r\n",
                     alias: "Follow模块",
                     value: "/content/email"
@@ -189,13 +198,13 @@ export default {
                 },
                 {
                   entity: {
-                    id: 17,
-                    name: "managerIntegration",
-                    icon: "el-icon-service\r\n",
+                    id: 15,
+                    name: "managerSystem",
+                    icon: "el-icon-sold-out\r\n",
                     alias: "Manager模块",
-                    value: "/content/pass"
+                    value: "/content/email"
                   }
-                }
+                },
               ]
             }
           ],

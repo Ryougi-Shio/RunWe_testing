@@ -12,6 +12,10 @@
           {{content_userTest[o]}}
         </div>
         </el-card>
+        <div class="answer">生成的测试报告如下：</div>
+        <div style="width:100%;height:100%">
+          <iframe src="/static/report/ManagerController测试报告.html" style="width:90%;height:650px"></iframe>
+        </div>
       </div>
     </div>
   </template>
@@ -38,7 +42,12 @@
           width: 80%;
         }
         .img {
-            width:70%
+            width:50%
+        }
+        .answer {
+          font-size:30px;
+          font-weight:bold;
+          margin-bottom:10px;
         }
   </style>
       
