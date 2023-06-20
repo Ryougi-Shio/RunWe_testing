@@ -65,7 +65,7 @@ def doA():
     # 添加用例描述
     result = BeautifulReport(suite)
     result.report(filename='ArticleController测试报告', description='Article测试报告',
-                  log_path='../../public/static/report')
+                  log_path='E:/RunWe_testing2/public/static/report')
 
 
 if __name__ == '__main__':

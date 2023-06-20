@@ -18,7 +18,8 @@ class FollowTest(unittest.TestCase):  # 调用unittest
         # 关注接口
         print("测试关注接口")
         for i in follow:
-            payload = {"userId": i["userId"], "followUserId": i["followUserId"]}
+            payload = {"userId": i["userId"],
+                       "followUserId": i["followUserId"]}
             print(payload)
             res = requests.post(url='http://localhost:8081/follow',
                                 data={'userId': i['userId'],
@@ -41,7 +42,8 @@ class FollowTest(unittest.TestCase):  # 调用unittest
         # 是否关注接口
         print("测试是否关注接口")
         for i in followOrNot:
-            payload = {"userId": i["userId"], "followUserId": i["followUserId"]}
+            payload = {"userId": i["userId"],
+                       "followUserId": i["followUserId"]}
             print(payload)
             res = requests.get('http://localhost:8081/follow/or/not/' + i['followUserId'],
                                params=payload)
@@ -68,7 +70,7 @@ def doF():
     # 添加用例描述
     result = BeautifulReport(suite)
     result.report(filename='FollowController测试报告', description='FollowController',
-                  log_path='../../public/static/report')
+                  log_path='E:/RunWe_testing2/public/static/report')
 
 
 if __name__ == '__main__':

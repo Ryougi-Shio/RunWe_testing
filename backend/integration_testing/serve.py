@@ -5,11 +5,10 @@ from flask_httpauth import HTTPBasicAuth
 from werkzeug.utils import secure_filename
 import os
 from flask_cors import CORS
-from integration_testing.ArticleTest import doA
-from integration_testing.ManagerTest import DoM
-from integration_testing.FollowTest import doF
-from integration_testing.UserTest import DoU
-
+from ArticleTest import doA
+from ManagerTest import DoM
+from FollowTest import doF
+from UserTest import DoU
 
 
 # =================================
@@ -34,25 +33,27 @@ def upload_img():
     print("image upload")
     if request.method == 'POST' or request.method == 'GET':
         print(request.form)
-        load= request.form.get("test")
+        load = request.form.get("test")
 
-        if load=="article":
-            pass
-        elif load=="follow":
-            doF();
-        elif load=="user":
-            DoU();
-        elif load=="manager":
+        if load == "article":
+            doA()
+        elif load == "follow":
+            doF()
+        elif load == "user":
+            DoU()
+        elif load == "manager":
             DoM()
         else:
             return "False"
 
     return "True"
 # ==============================================================================================================================
-#                                                                                                                              
-#                                           Main function                                                        	            #						     									       
-#  				                                                                                                
+#
+#                                           Main function                                                        	            #
+#
 # ==============================================================================================================================
+
+
 @app.route("/")
 def main():
     return render_template("main.html")
@@ -60,4 +61,3 @@ def main():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
-

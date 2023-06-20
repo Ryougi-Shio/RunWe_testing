@@ -84,6 +84,7 @@ class ManagerTest(unittest.TestCase):  # 调用unittest
             a = res.text
             print(a)
 
+
 def DoM():
     suite.addTest(ManagerTest('test_changeRank'))
     suite.addTest(ManagerTest('test_getClub'))
@@ -94,7 +95,7 @@ def DoM():
     # 添加用例描述
     result = BeautifulReport(suite)
     result.report(filename='ManagerController测试报告', description='ManagerController',
-                  log_path='../../public/static/report')
+                  log_path='E:/RunWe_testing2/public/static/report')
 
 
 if __name__ == '__main__':
