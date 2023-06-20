@@ -1,13 +1,7 @@
 <template>
   <div>
-    <el-menu
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-      :default-active="activeIndex"
-      router
-      style="min-height:100vh;width:230px;float:left"
-    >
+    <el-menu background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" :default-active="activeIndex" router
+      style="min-height:100vh;width:230px;float:left">
       <NavMenu :navMenus="menuData"></NavMenu>
     </el-menu>
     <router-view style="margin-left:250px"></router-view>
@@ -67,7 +61,7 @@ export default {
                 {
                   entity: {
                     id: 4,
-                    name: "userIntegration",
+                    name: "userunit",
                     icon: "el-icon-sold-out\r\n",
                     alias: "User模块",
                     value: "/content/email"
@@ -76,7 +70,7 @@ export default {
                 {
                   entity: {
                     id: 5,
-                    name: "articleIntegration",
+                    name: "articleunit",
                     icon: "el-icon-service\r\n",
                     alias: "Article模块",
                     value: "/content/pass"
@@ -85,7 +79,7 @@ export default {
                 {
                   entity: {
                     id: 6,
-                    name: "followIntegration",
+                    name: "followunit",
                     icon: "el-icon-sold-out\r\n",
                     alias: "Follow模块",
                     value: "/content/email"
@@ -94,7 +88,7 @@ export default {
                 {
                   entity: {
                     id: 7,
-                    name: "managerIntegration",
+                    name: "managerunit",
                     icon: "el-icon-service\r\n",
                     alias: "Manager模块",
                     value: "/content/pass"
@@ -210,22 +204,21 @@ export default {
           ],
         },
       ],
-      
+
     };
   },
-  mounted(){
+  mounted() {
     // eslint-disable-next-line no-console
     console.log(window.location.href)
     let start = window.location.href.lastIndexOf('/');
-    let path = window.location.href.slice(start+1);
+    let path = window.location.href.slice(start + 1);
     this.activeIndex = path;
-    
+
     // eslint-disable-next-line no-console
     console.log(this.activeIndex)
   }
-  
+
 };
 </script>
 
-<style>
-</style>
+<style></style>
