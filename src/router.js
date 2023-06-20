@@ -76,6 +76,30 @@ export default new Router({
         component: () =>
             import('./views/pages/homework/homework.vue')
     },
+    {
+        path: '/userunit',
+        name: 'userunit',
+        component: () =>
+            import('./views/pages/project/unittesting/user.vue')
+    },
+    {
+        path: '/followunit',
+        name: 'followunit',
+        component: () =>
+            import('./views/pages/project/unittesting/follow.vue')
+    },
+    {
+        path: '/managerunit',
+        name: 'managerunit',
+        component: () =>
+            import('./views/pages/project/unittesting/manager.vue')
+    },
+    {
+        path: '/articleunit',
+        name: 'articleunit',
+        component: () =>
+            import('./views/pages/project/unittesting/article.vue')
+    },
     ],
 })
 
